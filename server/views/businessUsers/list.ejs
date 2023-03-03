@@ -1,0 +1,65 @@
+<%-include ../partials/header.ejs%>
+<%-include ../partials/main_nav.ejs%>
+  <!--Main Nav Navigation-->
+  
+<main class="container">
+  <div class="row">
+    <div class="offset-md-1 col-md-10">
+         <h1><%=title %></h1>
+         <!-- <%if(typeof displayName =='string'&&displayName){%>
+        <a href="/busUsers/add" class="btn btn-primary" role="button"><i class="fas fa-plus-circle"></i>Add a Book</a> -->
+        <!-- <%}%> -->
+        <br>
+        <table class="table table-bordered table-striped table-hover">
+            <!--Header Row-->
+            <tr>
+              <%if(typeof displayName =='string'&&displayName){%>
+                <th class="text-center col-2">Contact Name</th>
+                
+                <th class="text-center col-1">Email Address</th>
+                <th class="text-center col-2">Contact Number</th>
+                
+                <th class="text-center col-1"></th>
+                <th class="text-center col-1"></th>
+                <%}else{%>
+                  <th class="text-center col-2">Contact Name</th>
+                
+                <th class="text-center col-1">Email Address</th>
+                <th class="text-center col-2">Contact Number</th>
+                
+
+                <%}%>
+                </tr>
+               <%for(let count = 0; count < BusUsers.length; count ++){%>
+                    <tr>
+                          <%if(typeof displayName =='string'&&displayName){%>
+                        <td class="text-center col-2"><%=BusUsers[count].username%></td>
+                        <td class="text-center col-2"><%=BusUsers[count].email%></td>
+                        <td class="text-center col-1">+14353673452</td>
+                        
+                    
+                        <td class="text-center col-1"><a href="/busUsers/edit/<%=BusUsers[count]._id%>" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Edit</a></td>
+                        <td class="text-center col-1"><a href="/busUsers/delete/<%=BusUsers[count]._id%>" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>
+                        <%}else{%>
+                          <td class="text-center col-2"><%=BusUsers[count].username%></td>
+                        <td class="text-center col-2"><%=BusUsers[count].email%></td>
+                        <td class="text-center col-1">+14353673452</td>
+                        
+                        <%}%>  
+                      </tr>
+                        <%}%>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+   <!--<h1><%= title %></h1>-->
+   <!--<p>Welcome to <%= title %></p>-->
+   <!--Script section-->
+  
+<%-include ../partials/bottom_nav.ejs%>
+ <%-include ../partials/footer.ejs%>
+
+
+
+

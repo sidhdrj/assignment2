@@ -1,0 +1,33 @@
+/*File name : custom css goes here*/
+/*Student’s Name : Siddharth dureja*/
+/*StudentID : 301308514, 
+ Date: March 03 2023*/
+ /* Custim css file created above hero image*/
+/* sidh background image */
+.bagimage_about {
+    height:100vh;
+    background: url('images/sidh.jpg');
+    background-size:cover;
+    position:relative;
+  }
+  .bagimage_home {
+    height:100vh;
+    background-size:cover;
+	background: url('images/landings.JPG');
+    position:relative;
+  }
+  /* text css above sidh image*/
+  .sidh_title {
+    font-size: 4.5rem;
+  }
+  .sidh_desc {
+    font-size: 2rem;
+  }
+  .sidh-text {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
